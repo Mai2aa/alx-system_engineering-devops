@@ -1,2 +1,2 @@
 #!/bin/bash
-find  -empty | cut -d: f 8 
+find .  -empty -printf '%f\n'  
