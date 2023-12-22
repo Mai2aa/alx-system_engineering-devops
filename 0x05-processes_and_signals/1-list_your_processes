@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#list your processes
+processes=$(ps -ef --forest)
+echo "$processes"
