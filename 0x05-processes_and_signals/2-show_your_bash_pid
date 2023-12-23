@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # show your bash PID
 # shellcheck disable=SC2009
-processes=$(ps auxf | grep -i "bash")
-echo "$processes"
+ps aux | grep bash
