@@ -2,7 +2,7 @@
 #a script that pings an ip address
 if [ $# -eq 0 ]
 then
-    echo "Usage: $0 {IP_ADDRESS}"
+    echo "Usage: ${0##*/} {IP_ADDRESS}"
     exit 1
 fi
 ipAddress=$1
