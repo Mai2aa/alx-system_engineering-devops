@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #change home ip address
-cp /etc/hosts /etc/hosts.bak
-sed -i '/^127.0.0.1[[:space:]]localhost$/s/$/ 127.0.0.2' /etc/hosts
-sed -i '/^157.240.11.35[[:sapce:]]facebook.com$/s/^157.240.11.35/8.8.8.8' /etc/hosts
+cp /etc/hosts ~/hosts.new
+sed -i '/^127.0.0.1[[:space:]]localhost$/s/$/ 127.0.0.2' ~/hosts.new
+sed -i '/^157.240.11.35[[:sapce:]]facebook.com$/s/^157.240.11.35/8.8.8.8' ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
