@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+ssh-keygen -t rsa -f ~/.ssh/school
 ssh -i ~/.ssh/school ubuntu@513435-web-01
