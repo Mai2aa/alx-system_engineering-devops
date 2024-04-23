@@ -9,3 +9,9 @@ sudo ufw allow 'Nginx HTTP'
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 service nginx start
+response=$(curl -s http://localhost)
+if [[ $response == *"Hello World!"* ]]; then
+    echo "Nginx configured successfully. Test passed!"
+else
+    echo "Nginx configuration test failed."
+fi
