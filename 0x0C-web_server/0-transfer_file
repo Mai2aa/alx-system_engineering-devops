@@ -6,7 +6,7 @@ if [ $# -lt 4 ]; then
 fi
 
 file_path=$1
-srever_ip=$2
+server_ip=$2
 username=$3
 path_of_key=$4
 
