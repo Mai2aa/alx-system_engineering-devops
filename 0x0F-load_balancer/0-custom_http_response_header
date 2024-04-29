@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-add_header X-Served-By $HOSTNAME;
+add_header X-Served-By "$HOSTNAME";
