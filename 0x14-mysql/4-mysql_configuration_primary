@@ -1,0 +1,5 @@
+[mysqld]
+# Disable binding MySQL to a specific IP
+#bind-address = 127.0.0.1
+log-bin = /var/lib/mysql/mysql-bin.log
+server-id = 1
