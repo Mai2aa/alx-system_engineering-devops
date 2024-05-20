@@ -14,13 +14,14 @@ if __name__ == '__main__':
     res = requests.get(task)
     tasks = res.json()
 
-    dict_users = {user: []}
+    user_tasks = []
     for task in tasks:
-        completed = task.get('completed')
-        title_task = task.get('title')
-        dict_users[user].append({
-            "task": task,
-            "completed": completed,
-            "username": user_name})
+        user_tasks.append({
+            "task": task['title'],
+            "completed": task['completed'],
+            "username": user_name
+        })
+
+    output = {user: user_tasks}
     with open('{}.json'.format(user), 'w') as jsonfile:
-        json.dump(dict_users, jsonfile)
+        json.dump(output, jsonfile)
