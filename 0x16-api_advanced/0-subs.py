@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ How many subs?"""
+
+
 import requests
 
 
@@ -8,8 +10,9 @@ def number_of_subscribers(subreddit):
     including : Non-Active users"""
     try:
         headers = {'User-Agent': 'MyRedditApp/1.0 by /u/Mai2aa'}
-        response = requests.get("https://www.reddit.com/r/{}/about.json"
-                                .format(subreddit), headers=headers)
+        response = requests.get(
+            "https://www.reddit.com/r/{}/about.json".format(subreddit),
+            headers=headers)
         if response.status_code == 200:
             return response.json()['data']['subscribers']
         else:
