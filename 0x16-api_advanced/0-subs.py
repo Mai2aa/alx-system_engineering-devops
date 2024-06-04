@@ -7,7 +7,7 @@ def number_of_subscribers(subreddit):
     """queries the Reddit API"""
     if not subreddit or type(subreddit) is not str:
         return 0
-    URL = f"http://www.reddit.com/r/{subreddit}/about.json"
+    URL = f"https://www.reddit.com/r/{subreddit}/about"
     HEAD = {'User-Agent': 'Hi/0.0'}
 
     response = requests.get(URL, headers=HEAD)
