@@ -10,9 +10,9 @@ def number_of_subscribers(subreddit):
     including : Non-Active users"""
     response = requests.get(
         "https://www.reddit.com/r/{}/about.json".format(subreddit),
-        headers={'User-Agent': 'My-User-Agent'},
+        headers={'User-Agent': 'User-Agent'},
         allow_redirects=False)
-    if response.status_code < 300:
+    if response.status_code == 200:
         return response.json()['data']['subscribers']
     else:
         return 0
